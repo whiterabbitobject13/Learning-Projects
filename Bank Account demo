@@ -1,0 +1,38 @@
+import bankaccount
+
+def main():
+    # gets the starting balance from the user and assigns it
+    # to the start_bal variable
+    start_bal = float(input('Enter starting balance: '))
+
+    # creates an instance of the BankAccount class and assigns
+    # it to the savings variable
+    savings = bankaccount.BankAccount(start_bal)
+    # start_bal will be passed as an argument to the __init__
+    # method, then the __init__ method will be passed into
+    # the bal parameter
+
+    # deposit amount entered by user
+    pay = float(input("Enter paycheck amount: "))
+    print('I will deposit that into your account.')
+    # savings.deposit method is called, passing the pay variable
+    # as an argument. Deposit method will be passed to the
+    # amount parameter
+    savings.deposit(pay)
+
+    # display balance from value returned from savings.get_balance
+    print('Your account balance is ', \
+        format(savings.get_balance(), ',.2f'), \
+        sep='')
+    
+    # user inputs withdraw amount, which gets assigned to cash variable
+    cash = float(input('How much would you like to withdraw? '))
+    print('I will withdraw that from your account. ')
+    # savings.withdraw method is called, passing cash as an argument
+    savings.withdraw(cash)
+
+    print('Your account balance is $', \
+        format(savings.get_balance(), ',.2f'), \
+        sep='')
+
+main()
