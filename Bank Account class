@@ -1,0 +1,28 @@
+class BankAccount:
+    # the __init__ method has two parameter variables: self and bal. 
+    # the bal parameter will accept the account's starting balance 
+    # as an argument. 
+    def __init__(self, bal):
+        # the bal parameter amount is assigned to the object's
+        # __balance attribute
+        self.__balance = bal
+    
+    # the deposit method has two variables: self and amount. when this
+    # method is called, the amount that is to be deposited into the
+    # account is passed into the amount parameter
+    def deposit(self, amount):
+        self.__balance += amount
+    # the  deposit method makes a deposit into the account
+
+    def withdraw(self, amount):
+        # the if statement determines whether there is enough in the
+        # account to make a withdrawal. If the balance is greater than
+        # the amount, the program will automatically subtract the 
+        # withdrawal amount
+        if self.__balance >= amount:
+            self.__balance -= amount
+        else:
+            print('ERROR: INSUFFICIENT FUNDS')
+    
+    def get_balance(self):
+        return self.__balance
