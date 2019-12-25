@@ -1,0 +1,34 @@
+import vehicles
+
+def main():
+    car = vehicles.Car('BMW', 2001, 70000, 15000.0, 4)
+
+    truck = vehicles.Truck('Toyota', 2002, 40000, 12000.0, '4WD')
+    
+    suv = vehicles.SUV('Volvo', 2000, 30000, 18500.0, 5)
+
+    print("USED CAR INVENTORY\n", \
+        "==================\n")
+
+    print("\nCar\n", \
+        "\nMake: ", car.get_make(), \
+        "\nModel: ", car.get_model(), \
+        "\nMileage: ", car.get_mileage(), \
+        "\nPrice: ", car.get_price(), \
+        "\nNumber of Doors: ", car.get_doors())
+    
+    print("\n\nTruck\n", \
+        "\nMake: ", truck.get_make(), \
+        "\nModel: ", truck.get_model(), \
+        "\nMileage: ", truck.get_mileage(), \
+        "\nPrice: ", truck.get_mileage(), \
+        "\nDrive Type: ", truck.get_drive_type())
+    
+    print("\n\nSUV\n", \
+        "\nMake: ", suv.get_make(), \
+        "\nModel: ", suv.get_model(), \
+        "\nMileage: ", suv.get_mileage(), \
+        "\nPrice: ", suv.get_price(), \
+        "\nPassenger Capacity: ", suv.get_pass_cap())
+
+main()
